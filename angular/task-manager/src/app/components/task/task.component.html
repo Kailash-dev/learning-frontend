@@ -1,0 +1,22 @@
+<!-- <p>task works!</p> -->
+<div class="flex items-center space-x-3">
+    <!-- <input
+      type="checkbox"
+      [checked]="task.completed"
+      (change)="toggleComplete(task)"
+      class="form-checkbox text-blue-500"
+    /> -->
+    <span
+      [class.line-through]="task.completed"
+      [class.text-gray-400]="task.completed"
+      class="text-gray-700"
+    >
+      {{ task.title }}
+    </span>
+  </div>
+  <button
+    (click)="deleteTask(task.id)"
+    class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600"
+  >
+    Delete
+  </button>
